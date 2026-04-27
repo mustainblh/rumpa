@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Welcome</h2>
+<button onclick="logout()">Logout</button>
+
+<h3>Add Contribution</h3>
+<input id="amount" type="number" placeholder="Amount">
+<button onclick="addMoney()">Add</button>
+
+<h3>All Contributions</h3>
+<ul id="list"></ul>
+
+<h3>Total: <span id="total">0</span></h3>
+
+<script>
+  // Login check
+  let user = localStorage.getItem("currentUser");
+  if (!user) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
